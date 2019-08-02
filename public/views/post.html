@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,18 +25,14 @@
             </ul>
         </div>
     </nav>
+    <h1>Post an Item</h1>
 
-    <!-- Needs to be centered -->
-
-    <h2>Looking for Something?</h2>
-
-    <!--form fill for city, state and drop down for type/category-->
     <div class="row">
         <form class="col s12">
             <div class="row">
-                <h6>Search By:</h6>
-                <div class="col s6">
-                    <input placeholder="City, State" id="location" type="text" class="validate">
+                <div class="input-field col s6">
+                    <input placeholder="Item Name" id="item-name" type="text" class="validate">
+                    <label for="item-name"><b>Item Name</b></label>
                 </div>
                 <!-- Dropdown Trigger -->
                 <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select a Category</a>
@@ -48,63 +45,51 @@
                     <li><a href="#!">Random</a></li>
 
                 </ul>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="City, State" id="post-loc" type="text" class="validate">
+                        <label for="post-loc"><b>Location</b></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="description" class="materialize-textarea"></textarea>
+                        <label for="description">Description</label>
+                    </div>
+                </div>
+                <div class="file-field input-field col s12">
+                    <div class="btn">
+                        <span>Upload an Image</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
 
-                <a class="waves-effect waves-light btn"><i class="fa fa-search"></i></a>
-
-
-            </div>
-    </div>
-
-    <h2>Want to Post an Item?</h2>
-
-    <!--popup login page - need to move inline css and js to external files-->
-
-    <!-- Button to open the modal login form -->
-    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
-
-    <!-- The login page Modal -->
-    <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-
-        <!-- Modal Content -->
-        <form class="modal-content animate" action="/action_page.php">
-            <div class="imgcontainer">
-                <h6>Another Man's Treasure</h6>
-            </div>
-
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-            </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                    class="cancelbtn">Cancel</button>
-            
-            </div>
         </form>
+
+        <a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Post It</a>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Success!</h4>
+                <p>You have posted an item up for trade. Keep checking back to see trade offers.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
+
     </div>
-
-    <p>OR</p>
-
-    <button><a href="account.html">Create an Account</a></button>
-
-
 
     <!--Adding all script tags-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../js/index.js"></script>
+
+
 
 
 
