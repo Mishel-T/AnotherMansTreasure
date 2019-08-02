@@ -13,6 +13,17 @@ module.exports = app => {
         // });
     });
 
+    // Load account page
+    app.get('/account', (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/views/account.html"));
+        // db.Example.findAll({}).then(dbExamples => {
+        //     res.render('index', {
+        //         msg: 'Welcome!',
+        //         examples: dbExamples
+        //     });
+        // });
+    });
+
     // Load example page and pass in an example by id
     app.get('/example/:id', (req, res) => {
         db.Example.findOne({ where: { id: req.params.id } }).then(dbExample => {
