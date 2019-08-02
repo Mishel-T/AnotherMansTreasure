@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const exphbs = require("express-handlebars");
 
 // Requiring our models for syncing
 const db = require("./models");
@@ -15,14 +14,6 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 
-// Handlebars
-app.engine(
-    "handlebars",
-    exphbs({
-        defaultLayout: "main"
-    })
-);
-app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/apiRoutes")(app);
