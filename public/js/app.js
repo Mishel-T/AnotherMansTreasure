@@ -91,3 +91,14 @@ function viewAlbum(albumName) {
         document.getElementById('app').innerHTML = getHtml(htmlTemplate);
     });
 }
+
+//show password toggle on 
+$("#pwshow").click(function() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+});
+
