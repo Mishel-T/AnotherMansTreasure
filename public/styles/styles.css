@@ -20,6 +20,20 @@ h5 {
   color: white;
 }
 
+a:hover {
+  color:#ffcdd2;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: none;
+    margin-right: 5px;
+}
+
+#name, #email, #password {
+  width: 50%;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
