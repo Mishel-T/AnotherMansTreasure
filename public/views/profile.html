@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="../styles/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Another Man's Treasure</title>
 </head>
 
@@ -24,22 +23,77 @@
             </ul>
         </div>
     </nav>
-    <h3>Welcome to Your Treasure Page</h3>
-    <div class="container">
-        <!--dynamically generate item entries with image and info based on get requests to database-->
+    <h3>Post an Item</h3>
 
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Item Name" id="item-name" type="text" class="validate">
+                    <label for="item-name"><b>Item Name</b></label>
+                </div>
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select a Category</a>
 
-        <a href="post.html" class="waves-effect waves-light btn">Post an Item</a>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#!">Electronics</a></li>
+                    <li><a href="#!">Home Goods</a></li>
+                    <li><a href="#!">Clothes</a></li>
+                    <li><a href="#!">Random</a></li>
+
+                </ul>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="City, State" id="post-loc" type="text" class="validate">
+                        <label for="post-loc"><b>Location</b></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="description" class="materialize-textarea"></textarea>
+                        <label for="description">Description</label>
+                    </div>
+                </div>
+                <div class="file-field input-field col s12">
+                    <div class="btn">
+                        <span>Upload an Image</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+
+        </form>
+
+        <a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Post It</a>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Success!</h4>
+                <p>You have posted an item up for trade. Keep checking back to see trade offers.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
 
     </div>
 
+    <!--Adding all script tags-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/app.js"></script>
 
-<!--Adding all script tags-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="../js/index.js"></script>
-<script src="../js/app.js"></script>
+
+
+
+
+
+
 </body>
 
 </html>

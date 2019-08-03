@@ -7,15 +7,17 @@
     "start": "node server.js",
     "lint": "eslint **/*.js --quiet",
     "fix": "eslint --fix .",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit",
+    "dev": "nodemon server.js"
   },
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "mysql2": "^1.6.4",
-    "sequelize": "^4.41.2"
+    "bcrypt-nodejs": "0.0.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "sequelize": "^5.12.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -24,6 +26,20 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
+    "nodemon": "^1.19.1",
     "prettier": "^1.13.7"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mishel-T/AnotherMansTreasure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Mishel-T/AnotherMansTreasure/issues"
+  },
+  "homepage": "https://github.com/Mishel-T/AnotherMansTreasure#readme"
 }
