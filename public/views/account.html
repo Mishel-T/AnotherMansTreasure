@@ -19,7 +19,7 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a href="/" class="brand-logo center">Another Man's Treasure</a>
+            <a href="index.html" class="brand-logo center">Another Man's Treasure</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a onclick="document.getElementById('id01').style.display='block'">Login</a></li>
             </ul>
@@ -29,19 +29,23 @@
     <h3>Create an Account</h3>
 
     <div class="row">
-        <form class="col s12">
+        <form class="col s12" action="/action_page.php">
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s12">
                     <input placeholder="Name" id="name" type="text" class="validate">
+                    <label>Name</label>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input placeholder="Email" id="email" type="email" class="validate">
+                        <label>Email</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input placeholder="Password" id="password" type="password" class="validate">
+                        <label>Password</label>
+                        <input type="checkbox" id="pwshow">Show Password<br>
                     </div>
                 </div>
 
@@ -55,7 +59,7 @@
                 <p>You have created an account. Go ahead and browse items up for trade or post your own!</p>
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                <a href="profile.html" class="modal-close waves-effect waves-green btn-flat">OK</a>
             </div>
         </div>
 
@@ -83,8 +87,8 @@
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>
-
-            <div class="container" style="background-color:#f1f1f1">
+    
+            <div class="container">
                 <button type="button" onclick="document.getElementById('id01').style.display='none'"
                     class="cancelbtn">Cancel</button>
 
