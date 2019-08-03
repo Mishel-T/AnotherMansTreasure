@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Import Google Icon Font-->
+   <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Lacquer|Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -12,105 +12,99 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Another Man's Treasure</title>
+
+   
 </head>
 
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo center">Another Man's Treasure</a>
+            <a href="/" class="brand-logo center">Another Man's Treasure</a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a onclick="document.getElementById('id01').style.display='block'">Login</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Needs to be centered -->
+    <h3>Create an Account</h3>
 
-    <h3>Looking for Something?</h3>
-
-
-    <!--form fill for city, state and drop down for type/category-->
-    <div class="row" id="search">
+    <div class="row">
         <form class="col s12">
             <div class="row">
-                <h6>Search By:</h6>
-                <div class="col s6">
-                    <input placeholder="City, State" id="location" type="text" class="validate">
+                <div class="input-field col s6">
+                    <input placeholder="Name" id="name" type="text" class="validate">
                 </div>
-                <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select a Category</a>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Email" id="email" type="email" class="validate">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Password" id="password" type="password" class="validate">
+                    </div>
+                </div>
 
-                <!-- Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="#!">Electronics</a></li>
-                    <li><a href="#!">Home Goods</a></li>
-                    <li><a href="#!">Clothes</a></li>
-                    <li><a href="#!">Random</a></li>
+        </form>
 
-                </ul>
+        <a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Create My Account</a>
 
-                <a class="waves-effect waves-light btn"><i class="fa fa-search"></i></a>
-
-
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Success!</h4>
+                <p>You have created an account. Go ahead and browse items up for trade or post your own!</p>
             </div>
-    </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
 
-    <h3>Want to Post an Item?</h3>
-
-    <div id="post-container">
-
-        <!--popup login page - need to move inline css and js to external files-->
-
-        <!-- Button to open the modal login form -->
-        <a onclick="document.getElementById('id01').style.display='block'">Login</a>
-
-
-
-        <p>OR</p>
-
-        <a href="account.html">Create an Account</a>
     </div>
     <!-- The login page Modal -->
     <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close"
             title="Close Modal">&times;</span>
-
+    
         <!-- Modal Content -->
         <form class="modal-content animate" action="/action_page.php">
             <div class="imgcontainer">
                 <h5>Login to your account</h5>
             </div>
-
+    
             <div class="container">
                 <label for="uname"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
-
+    
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <a class="waves-effect waves-teal btn-flat">Login</a>
-                
+    
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
             </div>
-
-            <div class="container">
-                <a class="waves-effect waves-teal btn-flat" onclick="document.getElementById('id01').style.display='none'"
-                    >Cancel</a>
-
+    
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+    
             </div>
         </form>
     </div>
 
+    <!-- Adding all script tags -->
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-
-    <!--Adding all script tags-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moments-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Custom JS -->
     <script src="../js/index.js"></script>
     <script src="../js/app.js"></script>
-
-
-
 
 
 </body>

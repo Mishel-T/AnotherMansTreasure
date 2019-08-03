@@ -1,8 +1,15 @@
+$('.dropdown-trigger').dropdown();
+
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+
+// Opens modal for account created message$(document).ready(function(){
+$(document).ready(function () {
+  $('.modal').modal();
+});
 
 // The API object contains methods for each kind of request we'll make
 var API = {
