@@ -24,7 +24,7 @@ const usersAPI = {
     modifyUser: () => {
         return $.ajax({
             url: "api/users",
-            type: "GET"
+            type: "PUT"
         });
     },
     deleteUser: id => {
