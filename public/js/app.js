@@ -1,7 +1,7 @@
 //create on click even for login button. On login, capture id from db based on username
 
 var albumBucketName = 'anothermanstreasure';
-var bucketRegion = 'US WEST (N. California)';
+var bucketRegion = 'us-west-2';
 var IdentityPoolId = 'IDENTITY_POOL_ID';
 
 AWS.config.update({
