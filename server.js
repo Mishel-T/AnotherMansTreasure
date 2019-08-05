@@ -18,6 +18,8 @@ app.use(express.static("public/views"));
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+require("./routes/imgRoutes")(app);
+
 
 var syncOptions = { force: true };
 
