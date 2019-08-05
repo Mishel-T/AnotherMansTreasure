@@ -30,8 +30,11 @@ a:hover {
     margin-right: 5px;
 }
 
-#name, #email, #password {
+#name, #email, #password, #item-name, #post-loc, #description{
   width: 50%;
+}
+#image {
+  width: 30%;
 }
 
 .list-group-item {
@@ -55,6 +58,9 @@ a:hover {
   padding: 0 0
 }
 
+.btn-small {
+  font-size: 12px;
+}
 
 
 /* The Modal (background) */
@@ -79,6 +85,14 @@ a:hover {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
+
+/*not doing anything right now, need to fix*/
+.ok-btn{
+  text-align: center; 
+  margin: 6px 20px;
+  background-color: transparent; 
+}
+
 
 /* The Close Button */
 .close {

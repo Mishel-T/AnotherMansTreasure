@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Lacquer|Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
 
     <title>Another Man's Treasure</title>
 </head>
@@ -27,43 +27,46 @@
 
     <div class="row">
         <form class="col s12">
-            <div class="row">
-                <div class="input-field col s6">
-                    <input placeholder="Item Name" id="item-name" type="text" class="validate">
-                    <label for="item-name"><b>Item Name</b></label>
-                </div>
-                <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select a Category</a>
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-trigger btn dropdownBtn' href='#' data-target='dropdown1'>Select a Category</a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Electronics</a></li>
+                <li><a href="#!">Home Goods</a></li>
+                <li><a href="#!">Clothes</a></li>
+                <li><a href="#!">Random</a></li>
+            
+            </ul>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input placeholder="Item Name" id="item-name" type="text" class="validate form-fields">
+            <label for="item-name"><b>Item Name</b></label>
+        </div>
 
-                <!-- Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="#!">Electronics</a></li>
-                    <li><a href="#!">Home Goods</a></li>
-                    <li><a href="#!">Clothes</a></li>
-                    <li><a href="#!">Random</a></li>
 
-                </ul>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input placeholder="City, State" id="post-loc" type="text" class="validate">
-                        <label for="post-loc"><b>Location</b></label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="description" class="materialize-textarea"></textarea>
-                        <label for="description">Description</label>
-                    </div>
-                </div>
-                <div class="file-field input-field col s12">
-                    <div class="btn">
-                        <span>Upload an Image</span>
-                        <input type="file">
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text">
-                    </div>
-                </div>
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="City, State" id="post-loc" type="text" class="validate form-fields">
+                <label for="post-loc"><b>Location</b></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="description" class="materialize-textarea form-fields"></textarea>
+                <label for="description">Description</label>
+            </div>
+        </div>
+        <div class="file-field input-field col s12">
+            <div class="btn btn-small">
+                <span>Upload an Image</span>
+                <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+                <input id="image" class="file-path validate" type="text">
+            </div>
+        </div>
 
         </form>
 
@@ -75,7 +78,7 @@
                 <p>You have posted an item up for trade. Keep checking back to see trade offers.</p>
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                <a href="profile.html" class="modal-close waves-effect waves-green btn-flat">OK</a>
             </div>
         </div>
 
