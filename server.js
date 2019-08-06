@@ -19,6 +19,8 @@ app.use(express.static("public/views"));
 require("./routes/usersApiRoutes")(app);
 require("./routes/productsApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+require("./routes/imgRoutes")(app);
+
 
 var syncOptions = { force: true };
 
