@@ -103,31 +103,3 @@ var handleDeleteBtnClick = function () {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
-
-
-// Get new user
-$(document).ready(() => {
-    const $userName = $("#name");
-    const $userEmail = $("#email");
-    const $userPassword = $("#password");
-
-    $("#userSubmit").on("click", () => {
-        console.log(`Name: ${$userName.val().trim()} \nEmail: ${$userEmail.val().trim()} \nPassword: ${$userPassword.val().trim()}`);
-
-        const user = {
-            name: $userName.val().trim(),
-            email: $userEmail.val().trim(),
-            password: $userPassword.val().trim()
-        }
-
-        $.ajax({
-            headers: {
-                "Content-Type": "application/json"
-            },
-            type: "POST",
-            url: "api/users",
-            data: JSON.stringify(user)
-        });
-    });
-
-});
