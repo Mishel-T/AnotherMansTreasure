@@ -43,7 +43,9 @@ const createNewProduct = () => {
         type: "Placeholder",
         location: $productLoc.val().trim(),
         description: $productDesc.val().trim(),
-        img_path: "placeholder"
+        img_path: "placeholder",
+        UserId: 1
+
     }
 
     productsAPI.saveProduct(product);

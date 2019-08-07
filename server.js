@@ -1,5 +1,8 @@
 require("dotenv").config();
 const express = require("express");
+const busboy = require('connect-busboy');
+const busboyBodyParser = require('busboy-body-parser');
+const bodyParser = require('body-parser');
 
 // Requiring our models for syncing
 const db = require("./models");
@@ -14,13 +17,16 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 app.use(express.static("public/views"));
+app.use(busboy());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(busboyBodyParser());
 
 // Routes
 require("./routes/usersApiRoutes")(app);
 require("./routes/productsApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-//require("./routes/imgRoutes")(app);
-
+require("./services/upload.js")(app);
 
 var syncOptions = { force: true };
 
