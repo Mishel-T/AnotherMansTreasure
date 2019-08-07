@@ -31,16 +31,13 @@
 
     <div class="row">
         <form class="col s12">
-            <!-- Dropdown Trigger -->
-            <a class='dropdown-trigger btn dropdownBtn' data-target='dropdown1'>Select a Category</a>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a>Electronics</a></li>
-                <li><a>Home Goods</a></li>
-                <li><a>Clothes</a></li>
-                <li><a>Random</a></li>
-            
-            </ul>
+            <select class='dropdown-trigger btn dropdownBtn' id="category" placeholder="category">
+                <option value="none" disabled selected>Select a Category</option>
+                <option value="electronics">Electronics</option>
+                <option value="home goods">Home Goods</option>
+                <option value="clothes">Clothes</option>
+                <option value="random">Random</option>
+            </select>
     </div>
     <div class="row">
         <div class="input-field col s12">
@@ -49,7 +46,7 @@
         </div>
 
 
-        
+
         <div class="row">
             <div class="input-field col s12">
                 <input placeholder="City, State" id="post-loc" type="text" class="validate form-fields">
