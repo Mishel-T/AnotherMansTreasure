@@ -35,21 +35,21 @@
             <div class="row">
                 <h6>Search By:</h6>
                 <div class="col s6">
-                    <input placeholder="City, State" id="location" type="text" class="validate">
+                    <input placeholder="City, State" id="location" type="text" class="validate" value="">
                 </div>
                 <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select a Category</a>
+                <a class='dropdown-trigger btn dropdownBtn' data-target='dropdown1' value="" id="category">Select a Category</a>
 
                 <!-- Dropdown Structure -->
                 <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="#!">Electronics</a></li>
-                    <li><a href="#!">Home Goods</a></li>
-                    <li><a href="#!">Clothes</a></li>
-                    <li><a href="#!">Random</a></li>
+                    <option value="electronics">Electronics</option>
+                    <li><a>Home Goods</a></li>
+                    <li><a>Clothes</a></li>
+                    <li><a>Random</a></li>
 
                 </ul>
 
-                <a class="waves-effect waves-light btn"><i class="fa fa-search"></i></a>
+                <a class="waves-effect waves-light btn" id="search-btn"><i class="fa fa-search"></i></a>
 
 
             </div>
