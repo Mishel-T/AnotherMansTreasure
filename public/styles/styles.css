@@ -20,6 +20,10 @@ h5 {
   color: white;
 }
 
+select {
+  width:15%;
+}
+
 a:hover {
   color:#ffcdd2;
 }

@@ -37,17 +37,18 @@
                 <div class="col s6">
                     <input placeholder="City, State" id="location" type="text" class="validate" value="">
                 </div>
-                <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger btn dropdownBtn' data-target='dropdown1' value="" id="category">Select a Category</a>
 
-                <!-- Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                    <option value="electronics">Electronics</option>
-                    <li><a>Home Goods</a></li>
-                    <li><a>Clothes</a></li>
-                    <li><a>Random</a></li>
+                <form action="">
+                    <select class='dropdown-trigger btn dropdownBtn' id="category" placeholder="category">
+                        <option value= "none" disabled selected>Category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="home goods">Home Goods</option>
+                        <option value="clothes">Clothes</option>
+                        <option value="random">Random</option>
+                    </select></form>
 
-                </ul>
+
+
 
                 <a class="waves-effect waves-light btn" id="search-btn"><i class="fa fa-search"></i></a>
 
@@ -89,12 +90,12 @@
                 <input type="password" placeholder="Enter Password" name="psw" required>
 
                 <a class="waves-effect waves-teal btn-flat">Login</a>
-                
+
             </div>
 
             <div class="container">
-                <a class="waves-effect waves-teal btn-flat" onclick="document.getElementById('id01').style.display='none'"
-                    >Cancel</a>
+                <a class="waves-effect waves-teal btn-flat"
+                    onclick="document.getElementById('id01').style.display='none'">Cancel</a>
 
             </div>
         </form>
