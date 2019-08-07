@@ -2,6 +2,8 @@
 const $productName = $("#item-name");
 const $productLoc = $("#post-loc");
 const $productDesc = $("#description");
+const $productType = $("category");
+const $productImage = $("image");
 
 // The API object contains methods for each kind of request we'll make
 const productsAPI = {
@@ -40,12 +42,10 @@ const createNewProduct = () => {
 
     const product = {
         item_name: $productName.val().trim(),
-        type: "Placeholder",
+        type: $productType.val(),
         location: $productLoc.val().trim(),
         description: $productDesc.val().trim(),
-        img_path: "placeholder",
-        UserId: 1
-
+        img_path: $productImage.val()
     }
 
     productsAPI.saveProduct(product);
@@ -53,6 +53,7 @@ const createNewProduct = () => {
     $productName.val("");
     $productLoc.val("");
     $productDesc.val("");
+    $productType.val("");
 };
 
 $(document).ready(() => {
