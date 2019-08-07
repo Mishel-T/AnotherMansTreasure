@@ -1,9 +1,32 @@
 //category dropdown initialize
-$('.dropdown-trigger').dropdown();
+$(document).ready(function () {
+    $('.dropdown-trigger').dropdown();
 $('#dropdown1 li').click(function () {
     a = $(this).text()
     $('.dropdownBtn').text(a)
 })
+});
+
+var hasChosenSearch = false
+
+//create on click event for search button. On click, capture values for location and/or category
+    //add validation to make sure user has entered at least one search parameter
+$("#search-btn").click(function(event) {
+    event.preventDefault
+
+    var location = $("#location").val().trim();
+    var category = $("#category").val();
+    console.log(location)
+    console.log(category)
+
+    //if location or cateogry not selected, alert user and stop results page from loading. 
+    if (!location.length || !category.length) {
+        console.log("exit search event")
+        return alert('Please select a location and/or category first.');
+
+} else{window.location.href = "results.html"}
+});
+    //use values and get data from get request 
 
 //create on click even for login button. On login, capture id from db based on username - would actually go in index.js
 
