@@ -41,7 +41,6 @@
                 <form action="">
                     <select class='dropdown-trigger btn dropdownBtn' id="category" placeholder="category">
                         <option value= "none" disabled selected>Category</option>
-                        <option value="all">All</option>
                         <option value="electronics">Electronics</option>
                         <option value="home goods">Home Goods</option>
                         <option value="clothes">Clothes</option>
@@ -83,23 +82,20 @@
                 <h5>Login to your account</h5>
             </div>
 
-            <div class="container" id="login-container">
+            <div class="container">
                 <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" id="loginUname" value="" required>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" id="loginpw" required>
+                <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <a class="waves-effect waves-teal btn-flat" id ="login-btn">Login</a>
+                <a class="waves-effect waves-teal btn-flat">Login</a>
 
             </div>
 
             <div class="container">
                 <a class="waves-effect waves-teal btn-flat"
                     onclick="document.getElementById('id01').style.display='none'">Cancel</a>
-                    <div id="warning">
-
-                    </div>
 
             </div>
         </form>
@@ -113,7 +109,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/app.js"></script>
-    <script src="../js/results.js"></script>
 
 </body>
 

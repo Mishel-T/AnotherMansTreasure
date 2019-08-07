@@ -2,8 +2,8 @@
 const $productName = $("#item-name");
 const $productLoc = $("#post-loc");
 const $productDesc = $("#description");
-const $productType = $("#category");
-const $productImage = $("#image-upload");
+const $productType = $("category");
+const $productImage = $("image");
 
 // The API object contains methods for each kind of request we'll make
 const productsAPI = {
