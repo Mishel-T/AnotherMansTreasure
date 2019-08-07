@@ -1,7 +1,7 @@
 //category dropdown initialize
 $(document).ready(function () {
 
-});
+
 
 
 //create on click event for search button. On click, capture values for location and/or category
@@ -28,10 +28,49 @@ $("#search-btn").click(function (event) {
     else if (location.length != 0) {
         window.location.href = "results.html"
     }
+    getProducts(location, category);
 });
 //use values and get data from get request 
+    // This function grabs products from the database and updates the view
+    function getProducts() {
+        var categoryString = category || "";
+        var locationString = location || "";
+        if (categoryString) {
+            categoryString = "/category/" + categoryString;
+        }
+        $.get("/api/products" + categoryString, function (data) {
+            console.log("Products", data);
+            products = data;
+            if (!products || !products.length) {
+                displayEmpty();
+            }
+            else {
+                initializeCards();
+            }
+        });
+    }
+//handles posting all search results to results page
+    function initializeCards() {
+        productContainer.empty();
+        var productsToAdd = [];
+        for (var i = 0; i < products.length; i++) {
+            productsToAdd.push(createNewCard(posts[i]));
+        }
+        productContainer.append(productstoAdd);
+    }
 
-//create on click even for login button. On login, capture id from db based on username - would actually go in index.js
+//create function to create card elements to house product results from initializeCards
+
+    // This function displays a message when there are no posts
+    function displayEmpty() {
+        productContainer.empty();
+        var messageH2 = $("<h2>");
+        messageH2.css({ "text-align": "center", "margin-top": "50px" });
+        messageH2.html("No products have been added that match your search yet. Check back regularly to see new products! <br> Try a different search <a href='/index'></a>");
+        blogContainer.append(messageH2);
+    }
+
+//create on click even for login button. On login, capture id from db based on username
 
 var albumBucketName = 'anothermanstreasure';
 var bucketRegion = 'us-west-2';
@@ -133,5 +172,6 @@ $("#pwshow").click(function () {
     } else {
         x.type = "password";
     }
+});
 });
 
