@@ -7,7 +7,7 @@ var $exampleList = $("#example-list");
 
 // Opens modal for account created message$(document).ready(function(){
 $(document).ready(function () {
-    $('.modal').modal();
+  
 });
 
 
