@@ -27,11 +27,6 @@ select {
 a:hover {
   color:#ffcdd2;
 }
-
-#no-product {
-  text-align: center;
-  margin-top: 50px
-}
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
     position: relative;
     opacity: 1;
@@ -87,19 +82,14 @@ a:hover {
   padding-top: 60px;
 }
 
-
-
 /* Modal Content/Box */
 .modal-content {
+  background-color: #fefefe;
   margin: 5px auto; /* 15% from the top and centered */
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
-.modal-footer {
-    background-color: rgba(67, 118, 148, 0.99); /* Black w/ opacity */
-
-}
 /*not doing anything right now, need to fix*/
 .ok-btn{
   text-align: center; 
