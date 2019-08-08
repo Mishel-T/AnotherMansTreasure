@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="file-field input-field col s12">
                 <div class="btn btn-small">
                     <span>Upload an Image</span>
@@ -75,7 +75,20 @@
                     <input id="image" class="file-path validate" type="text" value="">
                 </div>
             </div>
+        </div> -->
+
+        <div class="row">
+            <form action="/api/upload" method="POST" enctype="multipart/form-data" class="file-field input-field col s12">
+                <div class="btn btn-small">
+                    <span>Upload an Image</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input id="image" class="file-path validate" type="text">
+                </div>
+            </form>
         </div>
+        
     </div>
     <!-- End submit options -->
 
