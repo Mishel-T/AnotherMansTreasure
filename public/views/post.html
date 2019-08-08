@@ -27,25 +27,29 @@
             </ul>
         </div>
     </nav>
+
     <h3>Post an Item</h3>
 
-    <div class="row">
-        <form class="col s12">
-            <select class='dropdown-trigger btn dropdownBtn' id="category" placeholder="category">
-                <option value="none" disabled selected>Select a Category</option>
-                <option value="electronics">Electronics</option>
-                <option value="home goods">Home Goods</option>
-                <option value="clothes">Clothes</option>
-                <option value="random">Random</option>
-            </select>
-    </div>
-    <div class="row">
-        <div class="input-field col s12">
-            <input placeholder="Item Name" id="item-name" type="text" class="validate form-fields">
-            <label for="item-name"><b>Item Name</b></label>
+    <!-- Submit options -->
+    <div>
+        <div class="row">
+            <div class="col s12">
+                <select class='dropdown-trigger btn dropdownBtn' id="category" placeholder="category">
+                    <option value="none" disabled selected>Select a Category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="home-goods">Home Goods</option>
+                    <option value="clothes">Clothes</option>
+                    <option value="random">Random</option>
+                </select>
+            </div>
         </div>
 
-
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="Item Name" id="item-name" type="text" class="validate form-fields">
+                <label for="item-name"><b>Item Name</b></label>
+            </div>
+        </div>
 
         <div class="row">
             <div class="input-field col s12">
@@ -53,37 +57,55 @@
                 <label for="post-loc"><b>Location</b></label>
             </div>
         </div>
+
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="description" class="materialize-textarea form-fields"></textarea>
                 <label for="description">Description</label>
             </div>
         </div>
-        <div class="file-field input-field col s12">
-            <div class="btn btn-small">
-                <span>Upload an Image</span>
-                <input type="file">
+
+        <!-- <div class="row">
+            <div class="file-field input-field col s12">
+                <div class="btn btn-small">
+                    <span>Upload an Image</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input id="image" class="file-path validate" type="text" value="">
+                </div>
             </div>
-            <div class="file-path-wrapper">
-                <input id="image" class="file-path validate" type="text" value="">
-            </div>
+        </div> -->
+
+        <div class="row">
+            <form action="/api/upload" method="POST" enctype="multipart/form-data" class="file-field input-field col s12">
+                <div class="btn btn-small">
+                    <span>Upload an Image</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input id="image" class="file-path validate" type="text">
+                </div>
+            </form>
         </div>
-
-        </form>
-
-        <a data-target="modal1" id="productSubmit" class="waves-effect waves-light btn modal-trigger">Post It</a>
-
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Success!</h4>
-                <p>You have posted an item up for trade. Keep checking back to see trade offers.</p>
-            </div>
-            <div class="modal-footer">
-                <a href="profile.html" class="modal-close waves-effect waves-green btn-flat">OK</a>
-            </div>
-        </div>
-
+        
     </div>
+    <!-- End submit options -->
+
+    <a data-target="modal1" id="productSubmit" class="waves-effect waves-light btn modal-trigger">Post It</a>
+
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Success!</h4>
+            <p>You have posted an item up for trade. Keep checking back to see trade offers.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="profile.html" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+    </div>
+
+
 
     <!--Adding all script tags-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
