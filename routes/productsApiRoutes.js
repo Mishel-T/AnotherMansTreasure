@@ -3,7 +3,14 @@ const db = require("../models");
 module.exports = app => {
     // Get all products
     app.get("/api/products", (req, res) => {
-        db.Product.findAll({})
+        var query = {};
+        if (req.query.user_id) {
+            query.UserId = req.query.user_id;
+        }
+        db.Product.findAll({
+            where: query, 
+            include: [db.User]
+        })
             .then(dbProducts => {
                 res.json(dbProducts);
             });
