@@ -5,13 +5,13 @@ $(document).ready(function () {
 
 
     //clearing warning to enter username and pw
-    // $("#id01").click(
-    //     function clearDiv() {
-    //         $("#warning").empty();
-    //         $("#loginUname").empty();
-    //         $("#loginpw").empty()
+    $("#id01").click(
+        function clearDiv() {
+            $("#warning").empty();
+            $("#loginUname").empty();
+            $("#loginpw").empty()
 
-    //     });
+        });
 
     //create on click event for login button. 
     $(document).on("click", "#login-btn", userLogin);
@@ -28,21 +28,21 @@ $(document).ready(function () {
             $("#warning").append(noLogin)
             return;
         }
-        // //function to pull user info
+        //function to pull user info
         var url = window.location.search;
         console.log(url);
 
         var userId;
-        //if (url.indexOf("?UserId") !== -1) {
+        if (url.indexOf("?user_id") !== -1) {
             userId = url.split("=")[1];
             getProducts(userId);
             console.log(userId)
-        //}
+        }
 
 
-        // window.location.href = "profile.html";
+        window.location.href = "/users";
 
-       // getUserProfile(username);
+       //getUserProfile(username);
 
     };
 
@@ -57,8 +57,9 @@ $(document).ready(function () {
     //             getPosts(postCategorySelect.val());
     //         });
     // }
+    
     // function getUserProfile(username) {
-    //     //$.get("/api/users/:id", username, function () {
+    //     $.get("/api/users/:email", username, function () {
     //         $.ajax({
     //         method: "GET",
     //         url: "/api/users/" + username

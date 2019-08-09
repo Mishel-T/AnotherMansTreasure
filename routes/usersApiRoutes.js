@@ -20,15 +20,16 @@ module.exports = app => {
 
 
     //get all products by user
-    app.get("/api/users/:id", function (req, res) {
-        db.User.findOne({
-            where: {
-                id: req.params.id
-            },
-            include: [db.Product]
+    app.get("/api/users", function (req, res) {
+        var query  = {};
+        if (req.query.UserId) {
+            query.UserId = req.query.user_id
+        }
+        db.User.findAll({
+            where: query
+            
         }).then(function (dbUser) {
             res.json(dbUser);
-            console.log(dbUser)
         });
     });
 
