@@ -18,6 +18,7 @@ module.exports = app => {
 
     // Create a new product
     app.post("/api/products", (req, res) => {
+        console.log(req.body);
         db.Product
             .create(req.body)
             .then(dbUser => {

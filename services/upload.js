@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 const Busboy = require('busboy');
-const config = require('./config.json');
+const config = require('../config/config.json');
 
 const BUCKET_NAME = 'anothermanstreasure';
 

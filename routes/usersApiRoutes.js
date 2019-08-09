@@ -3,7 +3,9 @@ const db = require("../models");
 module.exports = app => {
     // Get all accounts
     app.get("/api/users", (req, res) => {
-        db.User.findAll({})
+        db.User.findAll({
+            include: [db.Product]
+        })
             .then(dbUser => {
                 res.json(dbUser);
             });
@@ -14,6 +16,20 @@ module.exports = app => {
         // }).then(dbExamples => {
         //     res.json(dbExamples);
         // });
+    });
+
+
+    //get all products by user
+    app.get("/api/users/:id", function (req, res) {
+        db.User.findOne({
+            where: {
+                id: req.params.id
+            },
+            include: [db.Product]
+        }).then(function (dbUser) {
+            res.json(dbUser);
+            console.log(dbUser)
+        });
     });
 
     // Create a new account

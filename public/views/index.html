@@ -63,7 +63,7 @@
         <!--popup login page - need to move inline css and js to external files-->
 
         <!-- Button to open the modal login form -->
-        <a onclick="document.getElementById('id01').style.display='block'">Login</a>
+        <a  onclick="document.getElementById('id01').style.display='block'">Login</a>
 
 
 
@@ -89,7 +89,11 @@
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" id="loginpw" required>
 
-                <a class="waves-effect waves-teal btn-flat">Login</a>
+                <a class="waves-effect waves-teal btn-flat" id="login-btn">Login</a>
+
+                <div id="warning">
+
+                </div>
 
             </div>
 
