@@ -13,6 +13,75 @@ $(document).ready(function () {
 
         });
 
+  //begin blog.js equivalent code - finds all products by user and dispplays them      
+
+    // product container holds all of our products
+    var productContainer = $(".product-container");
+    var postCategorySelect = $("#category");
+    // Variable to hold products
+    var products;
+
+    // The code below handles the case where we want to get products for a specific user
+    // Looks for a query param in the url for user_id
+    var url = window.location.search;
+    var userId;
+    if (url.indexOf("?user_id=") !== -1) {
+        userId = url.split("=")[1];
+        getProducts(userId);
+    }
+
+    function getProducts(user) {
+        userId = user || "";
+        if (userId) {
+            userId = "/?user_id=" + userId;
+        }
+        $.get("/api/users" + userId, function (data) {
+            console.log("Products", data);
+            products = data;
+            if (!products || !products.length) {
+                displayEmpty(user);
+            }
+            else {
+                initializeRows();
+            }
+        });
+    }
+
+    // InitializeRows handles appending all of our constructed post HTML inside blogContainer
+    function initializeRows() {
+        productContainer.empty();
+        var productsToAdd = [];
+        for (var i = 0; i < products.length; i++) {
+            productsToAdd.push(createNewCard(products[i]));
+        }
+        productContainer.append(productsToAdd);
+    }
+
+
+    // This function constructs a product's HTML
+    function createNewCard(product) {
+        console.log("placeholder for dynamically created cards")
+       
+    }
+
+    // This function displays a message when there are no posts
+    function displayEmpty(id) {
+        var query = window.location.search;
+        var partial = "";
+        if (id) {
+            partial = " for User #" + id;
+        }
+        productContainer.empty();
+        var messageH2 = $("<h2>");
+        messageH2.css({ "text-align": "center", "margin-top": "50px" });
+        messageH2.html("No posts yet" + partial + ", navigate <a href='/post" + query +
+            "'>here</a> in order to get started.");
+        productContainer.append(messageH2);
+    }
+
+
+
+
     //create on click event for login button. 
     $(document).on("click", "#login-btn", userLogin);
 
@@ -40,7 +109,7 @@ $(document).ready(function () {
         }
 
 
-        window.location.href = "/users";
+        window.location.href = "/users?user_id=" + user.id
 
        //getUserProfile(username);
 

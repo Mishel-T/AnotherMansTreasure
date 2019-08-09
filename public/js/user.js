@@ -13,6 +13,7 @@ const usersAPI = {
             type: "POST",
             url: "api/users",
             data: JSON.stringify(user)
+
         });
     },
     getUser: () => {
@@ -21,18 +22,18 @@ const usersAPI = {
             type: "GET"
         });
     },
-    modifyUser: () => {
-        return $.ajax({
-            url: "api/users",
-            type: "PUT"
-        });
-    },
-    deleteUser: id => {
-        return $.ajax({
-            url: "api/users/" + id,
-            type: "DELETE"
-        });
-    }
+    // modifyUser: () => {
+    //     return $.ajax({
+    //         url: "api/users",
+    //         type: "PUT"
+    //     });
+    // },
+    // deleteUser: id => {
+    //     return $.ajax({
+    //         url: "api/users/" + id,
+    //         type: "DELETE"
+    //     });
+    // }
 };
 
 // Saves the new user to the db
@@ -45,11 +46,29 @@ const createNewUser = () => {
     }
 
     usersAPI.saveUser(user);
-
+    console.log(user)
     $userName.val("");
     $userEmail.val("");
     $userPassword.val("");
+
+    getUserData()
+
 };
+
+function getUserData() {
+    $.get("/api/users", function (data) {
+        //modify request to search for data by email
+       
+     console.log(data)
+        
+        window.location.href = "/users?user_id=" + data[0].id
+
+        
+    });
+   
+}
+
+
 
 $(document).ready(() => {
 

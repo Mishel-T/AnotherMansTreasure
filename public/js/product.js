@@ -4,7 +4,16 @@ const $productLoc = $("#post-loc");
 const $productDesc = $("#description");
 const $productType = $("#category");
 const $productImage = $("#image");
-const $userId = $("#userid")
+
+
+// Gets the part of the url that comes after the "?" (which we have if we're updating a post)
+var url = window.location.search;
+var userId;
+
+if (url.indexOf("?user_id=") !== -1) {
+    userId = url.split("=")[1];
+    console.log(userId)
+}
 // The API object contains methods for each kind of request we'll make
 const productsAPI = {
     saveProduct: product => {
@@ -46,7 +55,8 @@ const createNewProduct = () => {
         location: $productLoc.val().trim(),
         description: $productDesc.val().trim(),
         img_path: $productImage.val(),
-        UserId: $userId.val()
+        UserId: userId
+
 
     }
 
