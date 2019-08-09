@@ -22,13 +22,14 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    // Product.associate = function(models) {
-    //     Product.belongsTo(models.User, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     });
-    // };
+    Product.associate = function(models) {
+         models.Product.belongsTo(models.User, {
+             onDelete: "CASCADE",
+             foreignKey: {
+                 allowNull: false
+             }
+         });
+     };
 
     return Product;
 };

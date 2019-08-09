@@ -4,7 +4,7 @@ const $productLoc = $("#post-loc");
 const $productDesc = $("#description");
 const $productType = $("#category");
 const $productImage = $("#image");
-
+const $userId = $("#userid")
 // The API object contains methods for each kind of request we'll make
 const productsAPI = {
     saveProduct: product => {
@@ -45,7 +45,9 @@ const createNewProduct = () => {
         type: $productType.val(),
         location: $productLoc.val().trim(),
         description: $productDesc.val().trim(),
-        img_path: $productImage.val()
+        img_path: $productImage.val(),
+        UserId: $userId.val()
+
     }
 
     productsAPI.saveProduct(product);
