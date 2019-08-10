@@ -45,13 +45,15 @@ const createNewUser = () => {
         password: $userPassword.val().trim()
     }
 
-    usersAPI.saveUser(user);
+    usersAPI.saveUser(user).then( () => {
+        getUserData();
+    });
+    
     console.log(user)
     $userName.val("");
     $userEmail.val("");
     $userPassword.val("");
 
-    getUserData()
 
 };
 
