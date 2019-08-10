@@ -97,12 +97,7 @@ a:hover {
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
-/*not doing anything right now, need to fix*/
-.ok-btn{
-  text-align: center; 
-  margin: 6px 20px;
-  background-color: transparent; 
-}
+
 
 
 /* The Close Button */
@@ -123,12 +118,7 @@ a:hover {
   cursor: pointer;
 }
 
-.modal-footer {
-  font:white;
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(67, 118, 148, 0.99); /* Black w/ opacity */
 
-}
 
 /* Add Zoom Animation */
 .animate {
