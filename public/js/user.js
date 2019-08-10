@@ -45,10 +45,10 @@ const createNewUser = () => {
         password: $userPassword.val().trim()
     }
 
-    usersAPI.saveUser(user).then( () => {
+    usersAPI.saveUser(user).then(() => {
         getUserData();
     });
-    
+
     console.log(user)
     $userName.val("");
     $userEmail.val("");
@@ -57,7 +57,7 @@ const createNewUser = () => {
 
 };
 
-function getUserData() {
+$("#create-OK").on("click", function getUserData() {
     $.get("/api/users", function (data) {
         //modify request to search for data by email
        
@@ -68,7 +68,7 @@ function getUserData() {
         
     });
    
-}
+});
 
 
 

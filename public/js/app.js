@@ -99,7 +99,6 @@ $(document).ready(function () {
         productContainer.append(productsToAdd);
     }
 
-
     // This function constructs a product's HTML
     function createNewCard(product) {
         console.log("placeholder for dynamically created cards")
@@ -110,8 +109,12 @@ $(document).ready(function () {
         var newProductImage = $("<img>");
         newProductImage.addClass("activator");
         //newProductImage.attr("src", product.img_path);
+        // var imageName = $("#image").val();
+        // console.log(imageName);
+        // var imagePath =  "../images/" + imageName;
+        // console.log(imagePath);
+        // newProductImage.attr("src", imagePath);
         newProductImage.attr("src", "../images/snes.jpg")
-        console.log(product.img_path);
         var newProductCardContent = $("<div>");
         newProductCardContent.addClass("card-content");
         var newProductTitle = $("<span>")
