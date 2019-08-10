@@ -109,7 +109,8 @@ $(document).ready(function () {
         newProductImageContainer.addClass("card-image waves-effect waves-block waves-light");
         var newProductImage = $("<img>");
         newProductImage.addClass("activator");
-        newProductImage.attr("src", product.img_path);
+        //newProductImage.attr("src", product.img_path);
+        newProductImage.attr("src", "../images/snes.jpg")
         console.log(product.img_path);
         var newProductCardContent = $("<div>");
         newProductCardContent.addClass("card-content");
@@ -141,7 +142,7 @@ $(document).ready(function () {
         var cardDescription = $("<p>");
         cardDescription.text(product.description)
 
-        newProductImageContainer.append(newProductImage);
+        newProductImageContainer.prepend(newProductImage);
         newProductCard.append(newProductImageContainer);
         newProductCardContent.append(newProductTitle);
         newProductCardContent.append(submitTradeLink);
@@ -150,32 +151,6 @@ $(document).ready(function () {
         newProductCard.append(cardReveal);
 
         return newProductCard;
-
-
-
-        // newPostAuthor.text("Written by: " + post.Author.name);
-        // newPostAuthor.css({
-        //     float: "right",
-        //     color: "blue",
-        //     "margin-top":
-        //         "-10px"
-        // });
-        // var newPostCardBody = $("<div>");
-        // newPostCardBody.addClass("card-body");
-        // var newPostBody = $("<p>");
-        // newPostTitle.text(post.title + " ");
-        // newPostBody.text(post.body);
-        // newPostDate.text(formattedDate);
-        // newPostTitle.append(newPostDate);
-        // newPostCardHeading.append(deleteBtn);
-        // newPostCardHeading.append(editBtn);
-        // newPostCardHeading.append(newPostTitle);
-        // newPostCardHeading.append(newPostAuthor);
-        // newPostCardBody.append(newPostBody);
-        // newPostCard.append(newPostCardHeading);
-        // newPostCard.append(newPostCardBody);
-        // newPostCard.data("post", post);
-        // return newProductCard;
 
     }
 
