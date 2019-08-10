@@ -160,10 +160,6 @@ $(document).ready(function () {
     // This function displays a message when there are no posts
     function displayEmpty(id) {
         var query = window.location.search;
-        var partial = "";
-        if (id) {
-            partial = " for User #" + id;
-        }
         productContainer.empty();
         var messageH6 = $("<h6>");
         messageH6.html("No products posted yet yet. Click <a href='/post" + query +

@@ -60,9 +60,7 @@ const createNewUser = () => {
 $("#create-OK").on("click", function getUserData() {
     $.get("/api/users", function (data) {
         //modify request to search for data by email
-       
-     console.log(data)
-        
+               
         window.location.href = "/users?user_id=" + data[0].id
 
         

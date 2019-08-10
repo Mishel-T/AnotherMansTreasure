@@ -70,7 +70,7 @@ const createNewProduct = () => {
 
 };
 
-function getProductData() {
+$("#post-OK").on("click", function getProductData() {
     $.get("/api/products", function (data) {
         console.log(data)
 
@@ -85,7 +85,7 @@ function getProductData() {
 
     });
 
-}
+})
 
 $(document).ready(() => {
 

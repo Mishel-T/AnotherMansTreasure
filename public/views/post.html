@@ -60,7 +60,8 @@
 
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="description" class="materialize-textarea form-fields" Placeholder="Tell us about the item and what you're looking for."></textarea>
+                <textarea id="description" class="materialize-textarea form-fields"
+                    Placeholder="Tell us about the item and what you're looking for."></textarea>
                 <label for="description">Description</label>
             </div>
         </div>
@@ -78,7 +79,8 @@
         </div> -->
 
         <div class="row">
-            <form action="/api/upload" method="POST" enctype="multipart/form-data" class="file-field input-field col s12">
+            <form action="/api/upload" method="POST" enctype="multipart/form-data"
+                class="file-field input-field col s12">
                 <div class="btn btn-small">
                     <span>Upload an Image</span>
                     <input type="file">
@@ -88,7 +90,7 @@
                 </div>
             </form>
         </div>
-        
+
     </div>
     <!-- End submit options -->
 
@@ -99,9 +101,8 @@
         <div class="modal-content">
             <h4>Success!</h4>
             <p>You have posted an item up for trade. Keep checking back to see trade offers.</p>
-        </div>
-        <div class="modal-footer">
-            <a href="/users" class="modal-close waves-effect waves-green btn-flat">OK</a>
+            <a class="modal-close waves-effect waves-green btn-flat" id="post-OK">OK</a>
+
         </div>
     </div>
 
@@ -114,7 +115,7 @@
     <script src="../js/index.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/product.js"></script>
-    
+
 
 </body>
 

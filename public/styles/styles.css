@@ -75,6 +75,7 @@ a:hover {
 
 /* The Modal (background) */
 .modal {
+  font:white;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -87,6 +88,7 @@ a:hover {
   background-color: rgba(67, 118, 148, 0.99); /* Black w/ opacity */
   padding-top: 60px;
 }
+
 
 /* Modal Content/Box */
 .modal-content {
@@ -119,6 +121,13 @@ a:hover {
 .close:focus {
   color: red;
   cursor: pointer;
+}
+
+.modal-footer {
+  font:white;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(67, 118, 148, 0.99); /* Black w/ opacity */
+
 }
 
 /* Add Zoom Animation */
