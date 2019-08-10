@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // Static directory
 app.use(express.static("public"));
+app.use(express.static("public/images"));
 app.use(express.static("public/views"));
 app.use(busboy());
 app.use(bodyParser.urlencoded({ extended: true }));
