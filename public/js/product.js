@@ -66,7 +66,26 @@ const createNewProduct = () => {
     $productLoc.val("");
     $productDesc.val("");
     $productType.val("");
+    getProductData()
+
 };
+
+function getProductData() {
+    $.get("/api/products", function (data) {
+        console.log(data)
+
+        var url = window.location.search;
+        var userId;
+        if (url.indexOf("?user_id=") !== -1) {
+            userId = url.split("=")[1];
+            window.location.href = "/users?user_id=" + userId
+        }
+
+
+
+    });
+
+}
 
 $(document).ready(() => {
 
