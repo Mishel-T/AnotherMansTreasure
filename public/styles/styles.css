@@ -69,7 +69,9 @@ a:hover {
 .card-image {
   height: 250px;
 }
-
+.card {
+  margin: 30px;
+}
 
 /* The Modal (background) */
 .modal {
