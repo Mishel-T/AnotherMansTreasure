@@ -1,19 +1,16 @@
-* **The requirements for Project #2 are as follows:**
+#Another Man's Treasure
 
-  * Must use a Node and Express Web Server
+##Project 2 Application
 
-  * Must be backed by a MySQL Database with a Sequelize ORM  
+Another Man's Treasure is a an application designed to help users declutter their lives by allowing the user to post items up for trade rather than for sale. This gives the user the opportunity to acquire something of value that they might need in exchange for soemthing they would like to get rid of without monetary exchange. It creates an ideal situation for people who may not have much money to make regular purchases, but who may have items they can offer up to trade that would benefit someone else. 
 
-  * Must have both GET and POST routes for retrieving and adding new data
+Through Another Man's Treasure, a user can create a secure account and post items up for trade by entering the item's information and uploading a picture. Users can then manage their trades through their profile to fidn the most desirable trade offers. 
 
-  * Must be deployed using Heroku (with Data)
+Users can search on the home page for items by category or by location. Once a user has found an item they may need or want, they can offer items to trade that they have uploaded through their own profile, allowing the original poster of the item to the review the offer on their own profile. 
 
-  * Must utilize at least one new library, package, or technology that we haven’t discussed
 
-  * Must have a polished frontend / UI 
+Contributors
+Sahra, David, and Michelle
 
-  * Must have folder structure that meets MVC Paradigm
-
-  * Must meet good quality coding standards (indentation, scoping, naming)
-
-  * Must not expose sensitive API key information on the server, see [Protecting-API-Keys-In-Node.md](../../../../01-Class-Content/10-nodejs/03-Supplemental/Protecting-API-Keys-In-Node.md)
+Find Another Man's Treasure here
+https://sheltered-springs-45479.herokuapp.com/
